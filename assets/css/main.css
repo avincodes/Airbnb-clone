@@ -904,7 +904,7 @@ select {
 }
 
 .register__body {
-    margin: 6vh auto;
+    margin: 8vh auto;
     z-index: 1;
     max-width: 568px;
     width: 100%;
