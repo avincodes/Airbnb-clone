@@ -8,6 +8,7 @@
     max-width: 1300px;
     padding-left: 24px;
     padding-right: 24px;
+    margin: 0 auto;
 }
 
 .row {
@@ -279,6 +280,7 @@
 /* PC medium resolution > */
 @media (min-width: 1113px) {
     .grid.wide {
+        margin: 0 auto;
         padding-left: 80px;
         padding-right: 80px;
     }
@@ -436,6 +438,7 @@
 /* Tablet - PC low resolution */
 @media (min-width: 740px) and (max-width: 1023px) {
     .grid.wide {
+        margin: 0 auto;
         padding-left: 40px;
         padding-right: 40px;
     }
@@ -444,6 +447,7 @@
 /* > PC low resolution */
 @media (min-width: 1024px) and (max-width: 1239px) {
     .grid.wide {
+        margin: 0 auto;
         padding-left: 20px;
         padding-right: 20px;
     }
