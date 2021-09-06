@@ -1372,6 +1372,7 @@ select {
     border: none;
     margin-top: 3.6rem;
     cursor: pointer;
+    background-color: var(--white-color);
 }
 
 .discover__list {
@@ -1579,9 +1580,10 @@ select {
 }
 
 .search-mobile-top-form {
-    flex: 1;
+    position: relative;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .search-mobile-top {
@@ -1599,7 +1601,7 @@ select {
 }
 
 .search-mobile-top-input {
-    flex: 1;
+    /* flex: 1; */
     font-size: 1.8rem;
     line-height: 2.2rem;
     font-weight: 300;
@@ -1615,6 +1617,8 @@ select {
 
 .search-mobile-top-close {
     display: none;
+    position: absolute;
+    right: 0;
 }
 
 .search-mobile-top-close-icon {
