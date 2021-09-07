@@ -290,6 +290,38 @@ select {
     box-shadow: 0 1.6rem 3.2rem rgba(0,0,0,0.15), 0 0.3rem 0.8rem rgba(0,0,0,0.10);
 }
 
+.search-bar.search-bar--active {
+    background-color: #f7f7f7;
+}
+
+.search-bar-item.search-bar-item--active {
+    background-color: var(--white-color);
+    border-radius: 5rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar-item.search-bar-item--active > .search-bar-item-child{
+    visibility: visible;
+    opacity: 1;
+}
+
+.search-bar-item.search-bar-item--active::before {
+    display: none;
+}
+
+.search-bar-item.search-bar-item--active + .search-bar-item::before {
+    display: none;
+}
+
+.search-bar-item.search-bar-item--active:first-child ~ .search-bar-item--discovery::before{
+    display: none;
+}
+
+.search-bar-item.search-bar-item--active:hover {
+    background-color: #fff;
+    border-radius: 5rem;
+}
+
 .search-bar-item {
     flex: 1;
     padding: 1.5rem 2.4rem;
@@ -471,14 +503,6 @@ select {
     font-size: 1.8rem;
     font-weight: 200;
     margin: 0 1rem;
-}
-
-.search-bar-item:focus > .search-bar-location,
-.search-bar-item:focus > .search-bar-checkin,
-.search-bar-item:focus > .search-bar-checkout,
-.search-bar-item:focus > .search-bar-guest {
-    visibility: visible;
-    opacity: 1;
 }
 
 

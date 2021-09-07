@@ -76,11 +76,11 @@
                                 <a href="" class="navbar-search-link">Trải nghiệm trực tuyến</a>
                             </div>
                             <div class="search-bar">
-                                <div tabindex="0" class="search-bar-item">
+                                <div class="search-bar-item">
                                     <div class="search-bar-item__header">Địa điểm</div>
                                     <input type="text" class="search-bar-item__input" placeholder="Bạn sắp đi đâu?">
                                     
-                                    <div class="search-bar-location">
+                                    <div class="search-bar-location search-bar-item-child">
                                         <div class="search-bar-location-heading">MỌI LÚC, MỌI NƠI</div>
                                         <button class="search-bar-location-btn">
                                             <a href="" class="search-bar-location-link">
@@ -92,26 +92,26 @@
                                 </div>
                                 
                                 <!-- Location -->
-                                <div tabindex="0" class="search-bar-item search-bar-item--location">
+                                <div class="search-bar-item search-bar-item--location">
                                     <div class="search-bar-item__header">Nhận phòng</div>
                                     <div class="search-bar-item__dsc">Thêm ngày</div>
-                                    <label for="date-checkin" class="search-bar-checkin">
+                                    <label for="date-checkin" class="search-bar-checkin search-bar-item-child">
                                         <div class="search-bar-checkin-heading">CHỌN NGÀY NHẬN PHÒNG</div>
                                         <input type="date" class="search-bar-checkin-input" id="date-checkin">
                                     </label>
                                 </div>
-                                <div tabindex="0" class="search-bar-item search-bar-item--location">
+                                <div class="search-bar-item search-bar-item--location">
                                     <div class="search-bar-item__header">Trả phòng</div>
                                     <div class="search-bar-item__dsc">Thêm ngày</div>
-                                    <label for="date-checkout" class="search-bar-checkout">
+                                    <label for="date-checkout" class="search-bar-checkout search-bar-item-child">
                                         <div class="search-bar-checkout-heading">CHỌN NGÀY TRẢ PHÒNG</div>
                                         <input type="date" class="search-bar-checkout-input" id="date-checkout">
                                     </label>
                                 </div>
-                                <div tabindex="0" class="search-bar-item search-bar-item--location">
+                                <div class="search-bar-item search-bar-item--location">
                                     <div class="search-bar-item__header">Khách</div>
                                     <div class="search-bar-item__dsc">Thêm khách</div>
-                                    <div class="search-bar-guest">
+                                    <div class="search-bar-guest search-bar-item-child">
                                         <div class="search-bar-guest-item">
                                             <div class="search-bar-guest-item-info">
                                                 <div class="search-bar-guest-item-info-header">Người lớn</div>
@@ -151,6 +151,10 @@
                                 <div class="search-bar-item search-bar-item--discovery">
                                     <div class="search-bar-item__header">Ngày</div>
                                     <div class="search-bar-item__dsc">Thêm thời điểm bạn muốn tham gia</div>
+                                    <label for="date-checkout" class="search-bar-checkout search-bar-item-child">
+                                        <div class="search-bar-checkout-heading">CHỌN THỜI GIAN</div>
+                                        <input type="date" class="search-bar-checkout-input" id="date-checkout">
+                                    </label>
                                 </div>
 
                                 <button class="search-bar-btn">
@@ -1408,7 +1412,6 @@
         <script>
 
             //Scroll header
-
             var header = document.querySelector(".header-top");
             var navBarSearch = document.querySelector(".navbar-search");
             var searchBtn = document.querySelector(".navbar-s-search");
@@ -1450,7 +1453,6 @@
             // Khi click chạy func
             searchBtn.addEventListener('click',showSearchBar);
             overlay.addEventListener('click', hideSearchBar);
-
             // Show search bar
             function showSearchBar() {
                 searchBtn.classList.add("navbar-s-search--close");
@@ -1458,7 +1460,6 @@
                 header.classList.add("header-top--open");
                 overlay.classList.add("overlay--open");
             }
-
             // Show search bar
             function hideSearchBar() {
                 searchBtn.classList.remove("navbar-s-search--close");
@@ -1468,7 +1469,6 @@
             }
 
             // JS Cards Slide view
-
             var arrowNext = document.querySelector(".arrow-next-btn");
             var arrowBack = document.querySelector(".arrow-back-btn");
             var anywhereItems = document.querySelectorAll(".js-anywhere__item");
@@ -1507,6 +1507,33 @@
                     // }
                 }
             }
+
+            // Show search bar child when click
+            const searchBarItems = document.querySelectorAll(".search-bar-item");
+
+            // Cách 1
+            var active;
+            for (const searchBarItem of searchBarItems) {
+                searchBarItem.addEventListener('click', function(evt) {
+                    if (active) {
+                        active.classList.remove('search-bar-item--active');
+                    }
+                    evt.currentTarget.classList.add('search-bar-item--active');
+                    active = evt.currentTarget;
+                });
+            }
+            // Cách 2
+            // for (const searchBarItem of searchBarItems) {
+            //     searchBarItem.addEventListener('click', function(evt) {
+            //         if (this.classList.contains('search-bar-item--active')) {
+            //             this.classList.remove('search-bar-item--active');
+            //         } else {
+            //             this.classList.add('search-bar-item--active');
+            //         }
+            //     })
+            // }
+
+
         </script>
     </div>
 </body>
