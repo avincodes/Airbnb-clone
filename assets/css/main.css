@@ -1469,7 +1469,7 @@ select {
 }
 
 .footer__item-link {
-    display: block;
+    display: inline-block;
     text-decoration: none;
     font-size: 1.4rem;
     line-height: 1.8rem;
