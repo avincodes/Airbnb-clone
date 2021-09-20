@@ -84,6 +84,13 @@
     .region-list {
         margin: 14vh 4vh;
     }
+
+    .search-bar-checkin,
+    .search-bar-checkout,
+    .search-bar-day {
+        left: -210px;
+        right: -210px;
+    }
 }
 
 /* Tablet */
@@ -110,6 +117,20 @@
 
     .search-bar-item--discovery {
         flex: 1;
+    }
+
+    .search-bar-checkin,
+    .search-bar-checkout,
+    .search-bar-day {
+        left: 0px;
+        right: 0px;
+    }
+
+    .search-bar-btn.search-bar-btn--active {
+        width: 110px;
+    }
+    .search-bar-btn--active .search-bar-btn-text {
+        right: 12px;
     }
 
     .header-top.sticky .navbar-logo .navbar-logo-icon {

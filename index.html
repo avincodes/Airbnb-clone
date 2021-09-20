@@ -78,7 +78,13 @@
                             <div class="search-bar">
                                 <div class="search-bar-item">
                                     <div class="search-bar-item__header">Địa điểm</div>
-                                    <input type="text" class="search-bar-item__input" placeholder="Bạn sắp đi đâu?">
+                                    <form action="" class="form-search">
+                                        <input type="reset" value="Reset" id="del-input" hidden>
+                                        <input type="text" class="search-bar-item__input" placeholder="Bạn sắp đi đâu?">
+                                        <label for="del-input" class="search-del-close">
+                                            <ion-icon class="search-del-close-icon" name="close-outline"></ion-icon>
+                                        </label>
+                                    </form>
                                     
                                     <div class="search-bar-location search-bar-item-child">
                                         <div class="search-bar-location-heading">MỌI LÚC, MỌI NƠI</div>
@@ -95,18 +101,400 @@
                                 <div class="search-bar-item search-bar-item--location">
                                     <div class="search-bar-item__header">Nhận phòng</div>
                                     <div class="search-bar-item__dsc">Thêm ngày</div>
-                                    <label for="date-checkin" class="search-bar-checkin search-bar-item-child">
-                                        <div class="search-bar-checkin-heading">CHỌN NGÀY NHẬN PHÒNG</div>
-                                        <input type="date" class="search-bar-checkin-input" id="date-checkin">
-                                    </label>
+                                    <div class="search-bar-checkin search-bar-item-child">
+                                        <div class="calendar-tab">
+                                            <div class="carlendar__header js-checkin-tab-item checkin-tab-item--active">Lịch</div>
+                                            <div class="carlendar__header js-checkin-tab-item">Ngày linh hoạt</div>
+                                        </div>
+                                        <div class="grid content-tab">
+                                            <div class="row calendar-main js-checkin-tab-pane checkin-tab-pane--active">
+                                                <div class="col l-12 l-m-12 m-7 carlendar__month-icon">
+                                                    <ion-icon class="carlendar__month-icon-back" name="chevron-back-outline"></ion-icon>
+                                                    <ion-icon class="carlendar__month-icon-next" name="chevron-forward-outline"></ion-icon>
+                                                </div>
+                                                <div class="col l-5 l-m-5 m-6 calendar-item">
+                                                    <div class="calendar-month">
+                                                        <div class="carlendar__month-title">Tháng 9 Năm 2021</div>
+                                                    </div>
+                                                    <div class="row calendar__day-of-week">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T2</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T3</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T4</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T5</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T6</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T7</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">CN</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">1</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">2</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">3</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">4</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">5</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">6</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">7</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">8</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">9</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">10</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">11</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">12</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">13</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">14</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">15</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">16</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">17</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">18</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">19</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">20</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">21</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">22</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">23</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">24</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">25</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">26</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">27</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">28</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">29</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">30</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col l-5 l-m-5 m-0 calendar-item">
+                                                    <div class="calendar-month">
+                                                        <div class="carlendar__month-title">Tháng 10 Năm 2021</div>
+                                                    </div>
+                                                    <div class="row calendar__day-of-week">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T2</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T3</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T4</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T5</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T6</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T7</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">CN</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">1</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">2</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">3</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">4</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">5</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">6</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">7</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">8</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">9</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">10</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">11</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">12</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">13</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">14</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">15</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">16</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">17</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">18</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">19</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">20</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">21</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">22</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">23</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">24</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">25</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">26</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">27</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">28</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">29</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">30</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">31</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="flexible-main js-checkin-tab-pane">
+                                                <div class="flexible__header">Bạn muốn ở trong bao lâu?</div>
+                                                <div class="flexible__how_long">
+                                                    <input type="radio" name="checkin-flexible-how-long" id="checkin-select-weekend" checked hidden>
+                                                    <label for="checkin-select-weekend" class="flexible__how_long-item">Cuối tuần</label>
+                                                    <input type="radio" name="checkin-flexible-how-long" id="checkin-select-1-weekend" hidden>
+                                                    <label for="checkin-select-1-weekend" class="flexible__how_long-item">1 tuần</label>
+                                                    <input type="radio" name="checkin-flexible-how-long" id="checkin-select-1-month" hidden>
+                                                    <label for="checkin-select-1-month" class="flexible__how_long-item">1 tháng</label>
+                                                </div>
+                                                <div class="flexible__header">Bạn muốn đi khi nào?</div>
+                                                <div class="row flexible__when">
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="checkin-check-when-1" hidden checked>
+                                                        <label for="checkin-check-when-1" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 9</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="checkin-check-when-2" hidden>
+                                                        <label for="checkin-check-when-2" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 10</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="checkin-check-when-3" hidden>
+                                                        <label for="checkin-check-when-3" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 11</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="checkin-check-when-4" hidden>
+                                                        <label for="checkin-check-when-4" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 12</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="checkin-check-when-5" hidden>
+                                                        <label for="checkin-check-when-5" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 1</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="checkin-check-when-6" hidden>
+                                                        <label for="checkin-check-when-6" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 2</div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="search-bar-item search-bar-item--location">
                                     <div class="search-bar-item__header">Trả phòng</div>
                                     <div class="search-bar-item__dsc">Thêm ngày</div>
-                                    <label for="date-checkout" class="search-bar-checkout search-bar-item-child">
-                                        <div class="search-bar-checkout-heading">CHỌN NGÀY TRẢ PHÒNG</div>
-                                        <input type="date" class="search-bar-checkout-input" id="date-checkout">
-                                    </label>
+                                    <div class="search-bar-checkout search-bar-item-child">
+                                        <div class="calendar-tab">
+                                            <div class="carlendar__header js-checkout-tab-item checkout-tab-item--active">Lịch</div>
+                                            <div class="carlendar__header js-checkout-tab-item">Ngày linh hoạt</div>
+                                        </div>
+                                        <div class="grid content-tab">
+                                            <div class="row calendar-main js-checkout-tab-pane checkout-tab-pane--active">
+                                                <div class="col l-12 l-m-12 m-7 carlendar__month-icon">
+                                                    <ion-icon class="carlendar__month-icon-back" name="chevron-back-outline"></ion-icon>
+                                                    <ion-icon class="carlendar__month-icon-next" name="chevron-forward-outline"></ion-icon>
+                                                </div>
+                                                <div class="col l-5 l-m-5 m-6 calendar-item">
+                                                    <div class="calendar-month">
+                                                        <div class="carlendar__month-title">Tháng 9 Năm 2021</div>
+                                                    </div>
+                                                    <div class="row calendar__day-of-week">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T2</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T3</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T4</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T5</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T6</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T7</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">CN</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">1</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">2</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">3</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">4</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">5</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">6</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">7</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">8</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">9</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">10</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">11</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">12</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">13</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">14</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">15</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">16</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">17</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">18</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">19</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">20</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">21</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">22</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">23</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">24</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">25</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">26</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">27</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">28</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">29</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">30</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col l-5 l-m-5 m-0 calendar-item">
+                                                    <div class="calendar-month">
+                                                        <div class="carlendar__month-title">Tháng 10 Năm 2021</div>
+                                                    </div>
+                                                    <div class="row calendar__day-of-week">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T2</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T3</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T4</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T5</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T6</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T7</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">CN</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">1</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">2</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">3</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">4</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">5</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">6</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">7</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">8</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">9</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">10</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">11</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">12</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">13</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">14</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">15</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">16</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">17</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">18</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">19</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">20</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">21</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">22</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">23</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">24</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">25</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">26</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">27</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">28</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">29</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">30</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">31</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="flexible-main js-checkout-tab-pane">
+                                                <div class="flexible__header">Bạn muốn ở trong bao lâu?</div>
+                                                <div class="flexible__how_long">
+                                                    <input type="radio" name="checkout-flexible-how-long" id="checkout-select-weekend" checked hidden>
+                                                    <label for="checkout-select-weekend" class="flexible__how_long-item">Cuối tuần</label>
+                                                    <input type="radio" name="checkout-flexible-how-long" id="checkout-select-1-weekend" hidden>
+                                                    <label for="checkout-select-1-weekend" class="flexible__how_long-item">1 tuần</label>
+                                                    <input type="radio" name="checkout-flexible-how-long" id="checkout-select-1-month" hidden>
+                                                    <label for="checkout-select-1-month" class="flexible__how_long-item">1 tháng</label>
+                                                </div>
+                                                <div class="flexible__header">Bạn muốn đi khi nào?</div>
+                                                <div class="row flexible__when">
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="checkout-check-when-1" hidden checked>
+                                                        <label for="checkout-check-when-1" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 9</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="checkout-check-when-2" hidden>
+                                                        <label for="checkout-check-when-2" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 10</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="checkout-check-when-3" hidden>
+                                                        <label for="checkout-check-when-3" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 11</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="checkout-check-when-4" hidden>
+                                                        <label for="checkout-check-when-4" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 12</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="checkout-check-when-5" hidden>
+                                                        <label for="checkout-check-when-5" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 1</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="checkout-check-when-6" hidden>
+                                                        <label for="checkout-check-when-6" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 2</div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="search-bar-item search-bar-item--location">
                                     <div class="search-bar-item__header">Khách</div>
@@ -118,9 +506,9 @@
                                                 <div class="search-bar-guest-item-info-text">Từ 13 tuổi trở lên</div>
                                             </div>
                                             <div class="search-bar-guest-item-quantity">
-                                                <img class="search-bar-guest-item-quantity--remove" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDk2IDQ5NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDk2IDQ5NjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik0yNDgsMEMxMTEuMDMzLDAsMCwxMTEuMDMzLDAsMjQ4YzAuMTU0LDEzNi45MDMsMTExLjA5NywyNDcuODQ2LDI0OCwyNDhjMTM2Ljk2NywwLDI0OC0xMTEuMDMzLDI0OC0yNDhTMzg0Ljk2NywwLDI0OCwweg0KCQkJIE0yNDgsNDgwQzExOS44Nyw0ODAsMTYsMzc2LjEzLDE2LDI0OEMxNi4xNDYsMTE5LjkzLDExOS45MywxNi4xNDYsMjQ4LDE2YzEyOC4xMywwLDIzMiwxMDMuODcsMjMyLDIzMlMzNzYuMTMsNDgwLDI0OCw0ODB6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik00MDAsMjQwSDk2Yy00LjQxOCwwLTgsMy41ODItOCw4czMuNTgyLDgsOCw4aDMwNGM0LjQxOCwwLDgtMy41ODIsOC04UzQwNC40MTgsMjQwLDQwMCwyNDB6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" />
+                                                <ion-icon class="search-bar-guest-item-quantity-icon" name="remove-outline"></ion-icon>
                                                 <span class="search-bar-guest-item-quantity--number">2</span>
-                                                <img class="search-bar-guest-item-quantity--add" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDk2IDQ5NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDk2IDQ5NjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxnPg0KCQkJPHBhdGggZD0iTTI0OCwwQzExMS4wMzMsMCwwLDExMS4wMzMsMCwyNDhjMC4xNTQsMTM2LjkwMywxMTEuMDk3LDI0Ny44NDYsMjQ4LDI0OGMxMzYuOTY3LDAsMjQ4LTExMS4wMzMsMjQ4LTI0OFMzODQuOTY3LDAsMjQ4LDANCgkJCQl6IE0yNDgsNDgwQzExOS44Nyw0ODAsMTYsMzc2LjEzLDE2LDI0OEMxNi4xNDYsMTE5LjkzLDExOS45MywxNi4xNDYsMjQ4LDE2YzEyOC4xMywwLDIzMiwxMDMuODcsMjMyLDIzMlMzNzYuMTMsNDgwLDI0OCw0ODB6Ii8+DQoJCQk8cGF0aCBkPSJNNDAwLDI0MEgyNTZWOTZjMC00LjQxOC0zLjU4Mi04LTgtOHMtOCwzLjU4Mi04LDh2MTQ0SDk2Yy00LjQxOCwwLTgsMy41ODItOCw4czMuNTgyLDgsOCw4aDE0NHYxNDRjMCw0LjQxOCwzLjU4Miw4LDgsOA0KCQkJCXM4LTMuNTgyLDgtOFYyNTZoMTQ0YzQuNDE4LDAsOC0zLjU4Miw4LThTNDA0LjQxOCwyNDAsNDAwLDI0MHoiLz4NCgkJPC9nPg0KCTwvZz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K" />
+                                                <ion-icon class="search-bar-guest-item-quantity-icon" name="add-outline"></ion-icon>
                                             </div>
                                         </div>
                                         <div class="search-bar-guest-item">
@@ -129,9 +517,9 @@
                                                 <div class="search-bar-guest-item-info-text">Độ tuổi 2 - 12</div>
                                             </div>
                                             <div class="search-bar-guest-item-quantity">
-                                                <img class="search-bar-guest-item-quantity--remove search-bar-guest-item-quantity--disable" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDk2IDQ5NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDk2IDQ5NjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik0yNDgsMEMxMTEuMDMzLDAsMCwxMTEuMDMzLDAsMjQ4YzAuMTU0LDEzNi45MDMsMTExLjA5NywyNDcuODQ2LDI0OCwyNDhjMTM2Ljk2NywwLDI0OC0xMTEuMDMzLDI0OC0yNDhTMzg0Ljk2NywwLDI0OCwweg0KCQkJIE0yNDgsNDgwQzExOS44Nyw0ODAsMTYsMzc2LjEzLDE2LDI0OEMxNi4xNDYsMTE5LjkzLDExOS45MywxNi4xNDYsMjQ4LDE2YzEyOC4xMywwLDIzMiwxMDMuODcsMjMyLDIzMlMzNzYuMTMsNDgwLDI0OCw0ODB6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik00MDAsMjQwSDk2Yy00LjQxOCwwLTgsMy41ODItOCw4czMuNTgyLDgsOCw4aDMwNGM0LjQxOCwwLDgtMy41ODIsOC04UzQwNC40MTgsMjQwLDQwMCwyNDB6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" />
+                                                <ion-icon class="search-bar-guest-item-quantity-icon search-bar-guest-item-quantity--disable" name="remove-outline"></ion-icon>
                                                 <span class="search-bar-guest-item-quantity--number">0</span>
-                                                <img class="search-bar-guest-item-quantity--add" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDk2IDQ5NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDk2IDQ5NjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxnPg0KCQkJPHBhdGggZD0iTTI0OCwwQzExMS4wMzMsMCwwLDExMS4wMzMsMCwyNDhjMC4xNTQsMTM2LjkwMywxMTEuMDk3LDI0Ny44NDYsMjQ4LDI0OGMxMzYuOTY3LDAsMjQ4LTExMS4wMzMsMjQ4LTI0OFMzODQuOTY3LDAsMjQ4LDANCgkJCQl6IE0yNDgsNDgwQzExOS44Nyw0ODAsMTYsMzc2LjEzLDE2LDI0OEMxNi4xNDYsMTE5LjkzLDExOS45MywxNi4xNDYsMjQ4LDE2YzEyOC4xMywwLDIzMiwxMDMuODcsMjMyLDIzMlMzNzYuMTMsNDgwLDI0OCw0ODB6Ii8+DQoJCQk8cGF0aCBkPSJNNDAwLDI0MEgyNTZWOTZjMC00LjQxOC0zLjU4Mi04LTgtOHMtOCwzLjU4Mi04LDh2MTQ0SDk2Yy00LjQxOCwwLTgsMy41ODItOCw4czMuNTgyLDgsOCw4aDE0NHYxNDRjMCw0LjQxOCwzLjU4Miw4LDgsOA0KCQkJCXM4LTMuNTgyLDgtOFYyNTZoMTQ0YzQuNDE4LDAsOC0zLjU4Miw4LThTNDA0LjQxOCwyNDAsNDAwLDI0MHoiLz4NCgkJPC9nPg0KCTwvZz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K" />
+                                                <ion-icon class="search-bar-guest-item-quantity-icon" name="add-outline"></ion-icon>
                                             </div>
                                         </div>
                                         <div class="search-bar-guest-item">
@@ -140,9 +528,9 @@
                                                 <div class="search-bar-guest-item-info-text">Dưới 2</div>
                                             </div>
                                             <div class="search-bar-guest-item-quantity">
-                                                <img class="search-bar-guest-item-quantity--remove search-bar-guest-item-quantity--disable" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDk2IDQ5NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDk2IDQ5NjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik0yNDgsMEMxMTEuMDMzLDAsMCwxMTEuMDMzLDAsMjQ4YzAuMTU0LDEzNi45MDMsMTExLjA5NywyNDcuODQ2LDI0OCwyNDhjMTM2Ljk2NywwLDI0OC0xMTEuMDMzLDI0OC0yNDhTMzg0Ljk2NywwLDI0OCwweg0KCQkJIE0yNDgsNDgwQzExOS44Nyw0ODAsMTYsMzc2LjEzLDE2LDI0OEMxNi4xNDYsMTE5LjkzLDExOS45MywxNi4xNDYsMjQ4LDE2YzEyOC4xMywwLDIzMiwxMDMuODcsMjMyLDIzMlMzNzYuMTMsNDgwLDI0OCw0ODB6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik00MDAsMjQwSDk2Yy00LjQxOCwwLTgsMy41ODItOCw4czMuNTgyLDgsOCw4aDMwNGM0LjQxOCwwLDgtMy41ODIsOC04UzQwNC40MTgsMjQwLDQwMCwyNDB6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" />
+                                                <ion-icon class="search-bar-guest-item-quantity-icon search-bar-guest-item-quantity--disable" name="remove-outline"></ion-icon>
                                                 <span class="search-bar-guest-item-quantity--number">0</span>
-                                                <img class="search-bar-guest-item-quantity--add" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDk2IDQ5NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDk2IDQ5NjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxnPg0KCQkJPHBhdGggZD0iTTI0OCwwQzExMS4wMzMsMCwwLDExMS4wMzMsMCwyNDhjMC4xNTQsMTM2LjkwMywxMTEuMDk3LDI0Ny44NDYsMjQ4LDI0OGMxMzYuOTY3LDAsMjQ4LTExMS4wMzMsMjQ4LTI0OFMzODQuOTY3LDAsMjQ4LDANCgkJCQl6IE0yNDgsNDgwQzExOS44Nyw0ODAsMTYsMzc2LjEzLDE2LDI0OEMxNi4xNDYsMTE5LjkzLDExOS45MywxNi4xNDYsMjQ4LDE2YzEyOC4xMywwLDIzMiwxMDMuODcsMjMyLDIzMlMzNzYuMTMsNDgwLDI0OCw0ODB6Ii8+DQoJCQk8cGF0aCBkPSJNNDAwLDI0MEgyNTZWOTZjMC00LjQxOC0zLjU4Mi04LTgtOHMtOCwzLjU4Mi04LDh2MTQ0SDk2Yy00LjQxOCwwLTgsMy41ODItOCw4czMuNTgyLDgsOCw4aDE0NHYxNDRjMCw0LjQxOCwzLjU4Miw4LDgsOA0KCQkJCXM4LTMuNTgyLDgtOFYyNTZoMTQ0YzQuNDE4LDAsOC0zLjU4Miw4LThTNDA0LjQxOCwyNDAsNDAwLDI0MHoiLz4NCgkJPC9nPg0KCTwvZz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K" />
+                                                <ion-icon class="search-bar-guest-item-quantity-icon" name="add-outline"></ion-icon>
                                             </div>
                                         </div>
                                     </div>
@@ -151,14 +539,206 @@
                                 <div class="search-bar-item search-bar-item--discovery">
                                     <div class="search-bar-item__header">Ngày</div>
                                     <div class="search-bar-item__dsc">Thêm thời điểm bạn muốn tham gia</div>
-                                    <label for="date-checkout" class="search-bar-checkout search-bar-item-child">
-                                        <div class="search-bar-checkout-heading">CHỌN THỜI GIAN</div>
-                                        <input type="date" class="search-bar-checkout-input" id="date-checkout">
-                                    </label>
+                                    <div class="search-bar-day search-bar-item-child">
+                                        <div class="calendar-tab">
+                                            <div class="carlendar__header js-day-tab-item day-tab-item--active">Lịch</div>
+                                            <div class="carlendar__header js-day-tab-item">Ngày linh hoạt</div>
+                                        </div>
+                                        <div class="grid content-tab">
+                                            <div class="row calendar-main js-day-tab-pane day-tab-pane--active">
+                                                <div class="col l-12 l-m-12 m-7 carlendar__month-icon">
+                                                    <ion-icon class="carlendar__month-icon-back" name="chevron-back-outline"></ion-icon>
+                                                    <ion-icon class="carlendar__month-icon-next" name="chevron-forward-outline"></ion-icon>
+                                                </div>
+                                                <div class="col l-5 l-m-5 m-6 calendar-item">
+                                                    <div class="calendar-month">
+                                                        <div class="carlendar__month-title">Tháng 9 Năm 2021</div>
+                                                    </div>
+                                                    <div class="row calendar__day-of-week">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T2</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T3</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T4</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T5</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T6</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T7</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">CN</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">1</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">2</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">3</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">4</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">5</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">6</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">7</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">8</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">9</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">10</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">11</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">12</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">13</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">14</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">15</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">16</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">17</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable">18</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">19</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">20</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">21</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">22</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">23</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">24</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">25</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">26</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">27</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">28</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">29</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">30</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col l-5 l-m-5 m-0 calendar-item">
+                                                    <div class="calendar-month">
+                                                        <div class="carlendar__month-title">Tháng 10 Năm 2021</div>
+                                                    </div>
+                                                    <div class="row calendar__day-of-week">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T2</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T3</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T4</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T5</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T6</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">T7</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-of-week-item">CN</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item calendar__day-item--disable"> </div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">1</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">2</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">3</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">4</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">5</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">6</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">7</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">8</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">9</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">10</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">11</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">12</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">13</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">14</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">15</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">16</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">17</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">18</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">19</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">20</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">21</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">22</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">23</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">24</div>
+                                                    </div>
+                                                    <div class="row calendar__day">
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">25</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">26</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">27</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">28</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">29</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">30</div>
+                                                        <div class="col l-1-7 l-m-1-7 m-1-7 calendar__day-item">31</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="flexible-main js-day-tab-pane">
+                                                <div class="flexible__header">Bạn muốn ở trong bao lâu?</div>
+                                                <div class="flexible__how_long">
+                                                    <input type="radio" name="day-flexible-how-long" id="day-select-weekend" checked hidden>
+                                                    <label for="day-select-weekend" class="flexible__how_long-item">Cuối tuần</label>
+                                                    <input type="radio" name="day-flexible-how-long" id="day-select-1-weekend" hidden>
+                                                    <label for="day-select-1-weekend" class="flexible__how_long-item">1 tuần</label>
+                                                    <input type="radio" name="day-flexible-how-long" id="day-select-1-month" hidden>
+                                                    <label for="day-select-1-month" class="flexible__how_long-item">1 tháng</label>
+                                                </div>
+                                                <div class="flexible__header">Bạn muốn đi khi nào?</div>
+                                                <div class="row flexible__when">
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="day-check-when-1" hidden checked>
+                                                        <label for="day-check-when-1" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 9</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="day-check-when-2" hidden>
+                                                        <label for="day-check-when-2" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 10</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="day-check-when-3" hidden>
+                                                        <label for="day-check-when-3" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 11</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="day-check-when-4" hidden>
+                                                        <label for="day-check-when-4" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 12</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="day-check-when-5" hidden>
+                                                        <label for="day-check-when-5" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 1</div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col l-2 l-m-2 m-2">
+                                                        <input type="checkbox" name="" id="day-check-when-6" hidden>
+                                                        <label for="day-check-when-6" class="flexible__when-item">
+                                                            <img class="flexible__when-img" src="./assets/image/calendar.jpg" alt="">
+                                                            <img class="flexible__when-img-active" src="./assets/image/calendar2.jpg" alt="">
+                                                            <div class="flexible__when-text">Tháng 2</div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <button class="search-bar-btn">
                                     <ion-icon class="search-bar-btn-icon" name="search-outline"></ion-icon>
+                                    <div class="search-bar-btn-text">Tìm kiếm</div>
                                 </button>
                             </div>
                         </div>
@@ -883,7 +1463,7 @@
         <!-- Seclect nation and language -->
         <input type="checkbox" id="region-on-off" hidden>
 
-        <div class="modal-seclect-region">
+        <div class="modal-select-region">
 
             <label for="region-on-off" class="navbar-user-region__overlay"></label>
             
@@ -1425,7 +2005,6 @@
     </div>
 
     <script>
-
         //LĂN ĐỂ ĐỔI THANH NAVBAR
         var headerTop = document.querySelector(".header-top");
         var navBarSearch = document.querySelector(".navbar-search");
@@ -1510,15 +2089,17 @@
             }
         })
 
-        // ẨN HIỆN THANH SEARCH BAR NHỎ KHI CLICK
+        // ẨN HIỆN THANH SEARCHBARCHILD KHI CLICK
         const searchBarItems = document.querySelectorAll(".search-bar-item");
         const searchBarList = document.querySelector(".search-bar");
         const searchBarItemChilds = document.querySelectorAll(".search-bar-item-child");
+        const searchBtn = document.querySelector(".search-bar-btn");
 
         var active;
         for (const searchBarItem of searchBarItems) {
             searchBarItem.addEventListener('click', function(evt) {
                 searchBarList.classList.add('search-bar--active');
+                searchBtn.classList.add('search-bar-btn--active');
                 // Nếu đối tượng click đã có class active rồi thì khi click xóa active
                 if (this.classList.contains('search-bar-item--active')) {
                     this.classList.remove('search-bar-item--active');
@@ -1539,6 +2120,11 @@
                 event.stopPropagation()
             })
         }
+        // Sự kiện nổi bọt. Ngăn không cho click vào thằng form thì đóng thằng cha
+        var formSearch = document.querySelector('.form-search')
+        formSearch.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
         
         // nghe sự kiện click toàn trang (class wrapper bao toàn bộ nội dung trang)
         const wrapper = document.querySelector(".wrapper");
@@ -1557,8 +2143,76 @@
                         searchBarItem.classList.remove('search-bar-item--active');
                         searchBarList.classList.remove('search-bar--active');
                     }
+                    searchBtn.classList.remove('search-bar-btn--active');
                 }
             });
+
+        // TAB CALENDAR TRONG THANH SEARCH / Xem lại trong tab UI khóa HTML,CSS Tricks
+        const $ = document.querySelector.bind(document)
+        const $$ = document.querySelectorAll.bind(document)
+
+        const checkInTabItems = $$('.js-checkin-tab-item')
+        const checkInTabPanes = $$('.js-checkin-tab-pane')
+
+        checkInTabItems.forEach((tab,index) => {
+            //Lấy index của tab tương ứng với content
+            const checkInTabPane = checkInTabPanes[index]
+
+            tab.onclick = function () {
+                //Tìm item active rồi thì xóa đi
+                const checkInTabItemActive = $('.js-checkin-tab-item.checkin-tab-item--active')
+                checkInTabItemActive.classList.remove('checkin-tab-item--active')
+                //Tìm pane active rồi thì xóa đi
+                const checkInTabPaneActive = $('.js-checkin-tab-pane.checkin-tab-pane--active')
+                checkInTabPaneActive.classList.remove('checkin-tab-pane--active')
+                //Thêm class active vào item vừa click
+                this.classList.add('checkin-tab-item--active')
+                //Thêm class active vào content tương ứng tab click
+                checkInTabPane.classList.add('checkin-tab-pane--active')
+            }
+        })
+
+        const checkOutTabItems = $$('.js-checkout-tab-item')
+        const checkOutTabPanes = $$('.js-checkout-tab-pane')
+
+        checkOutTabItems.forEach((tab,index) => {
+            //Lấy index của tab tương ứng với content
+            const checkOutTabPane = checkOutTabPanes[index]
+
+            tab.onclick = function () {
+                //Tìm item active rồi thì xóa đi
+                const checkOutTabItemActive = $('.js-checkout-tab-item.checkout-tab-item--active')
+                checkOutTabItemActive.classList.remove('checkout-tab-item--active')
+                //Tìm pane active rồi thì xóa đi
+                const checkOutTabPaneActive = $('.js-checkout-tab-pane.checkout-tab-pane--active')
+                checkOutTabPaneActive.classList.remove('checkout-tab-pane--active')
+                //Thêm class active vào item vừa click
+                this.classList.add('checkout-tab-item--active')
+                //Thêm class active vào content tương ứng tab click
+                checkOutTabPane.classList.add('checkout-tab-pane--active')
+            }
+        })
+
+        const dayTabItems = $$('.js-day-tab-item')
+        const dayTabPanes = $$('.js-day-tab-pane')
+
+        dayTabItems.forEach((tab,index) => {
+            //Lấy index của tab tương ứng với content
+            const dayTabPane = dayTabPanes[index]
+
+            tab.onclick = function () {
+                //Tìm item active rồi thì xóa đi
+                const dayTabItemActive = $('.js-day-tab-item.day-tab-item--active')
+                dayTabItemActive.classList.remove('day-tab-item--active')
+                //Tìm pane active rồi thì xóa đi
+                const dayTabPaneActive = $('.js-day-tab-pane.day-tab-pane--active')
+                dayTabPaneActive.classList.remove('day-tab-pane--active')
+                //Thêm class active vào item vừa click
+                this.classList.add('day-tab-item--active')
+                //Thêm class active vào content tương ứng tab click
+                dayTabPane.classList.add('day-tab-pane--active')
+            }
+        })
     </script>
 </body>
 </html>
