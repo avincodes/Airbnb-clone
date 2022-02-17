@@ -1,6 +1,3 @@
-# 💚 Airbnb-clone
-
-
 # ️🛫 Responsive Airbnb Website
 
 - Clone basic website Airbnb
